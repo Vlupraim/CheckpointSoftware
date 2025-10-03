@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="da8abf7f1c3445e9b06731de111943af" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="BDCheckpointModel.CalidadLiberacion" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.Lote" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.Movimiento" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.Producto" Width="1.5" PointX="1.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.Rol" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.Sede" Width="1.5" PointX="1.5" PointY="17.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.Stock" Width="1.5" PointX="6" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.Ubicacion" Width="1.5" PointX="3.75" PointY="17.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.UserRole" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDCheckpointModel.Usuario" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="BDCheckpointModel.FK_CL_Lote" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_CL_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Lote_Producto" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Mov_Lote" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Stock_Lote" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Mov_Destino" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Mov_Origen" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Mov_Sede" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Mov_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_UserRole_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Ubicacion_Sede" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_Stock_Ubicacion" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_UserRole_Admin" ManuallyRouted="false" />
+        <AssociationConnector Association="BDCheckpointModel.FK_UserRole_Usuario" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
