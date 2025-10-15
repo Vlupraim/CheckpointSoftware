@@ -30,28 +30,30 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.datosUsuarios = new CheckpointSoftware.DatosUsuarios();
-            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usuarioTableAdapter = new CheckpointSoftware.DatosUsuariosTableAdapters.UsuarioTableAdapter();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.passwordHashDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.activoDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.usuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datosUsuarios = new CheckpointSoftware.DatosUsuarios();
+            this.usuarioTableAdapter = new CheckpointSoftware.DatosUsuariosTableAdapters.UsuarioTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtClave = new System.Windows.Forms.TextBox();
             this.btnAgregarUser = new System.Windows.Forms.Button();
+            this.Activo = new System.Windows.Forms.Label();
+            this.cbxActivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -71,20 +73,6 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(816, 150);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // datosUsuarios
-            // 
-            this.datosUsuarios.DataSetName = "DatosUsuarios";
-            this.datosUsuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // usuarioBindingSource
-            // 
-            this.usuarioBindingSource.DataMember = "Usuario";
-            this.usuarioBindingSource.DataSource = this.datosUsuarios;
-            // 
-            // usuarioTableAdapter
-            // 
-            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -125,6 +113,20 @@
             this.activoDataGridViewCheckBoxColumn.MinimumWidth = 8;
             this.activoDataGridViewCheckBoxColumn.Name = "activoDataGridViewCheckBoxColumn";
             this.activoDataGridViewCheckBoxColumn.Width = 150;
+            // 
+            // usuarioBindingSource
+            // 
+            this.usuarioBindingSource.DataMember = "Usuario";
+            this.usuarioBindingSource.DataSource = this.datosUsuarios;
+            // 
+            // datosUsuarios
+            // 
+            this.datosUsuarios.DataSetName = "DatosUsuarios";
+            this.datosUsuarios.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usuarioTableAdapter
+            // 
+            this.usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // label1
             // 
@@ -182,33 +184,33 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Password:";
             // 
-            // textBox1
+            // txtID
             // 
-            this.textBox1.Location = new System.Drawing.Point(272, 355);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(278, 26);
-            this.textBox1.TabIndex = 8;
+            this.txtID.Location = new System.Drawing.Point(272, 355);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(278, 26);
+            this.txtID.TabIndex = 8;
             // 
-            // textBox2
+            // txtUsuario
             // 
-            this.textBox2.Location = new System.Drawing.Point(272, 395);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(278, 26);
-            this.textBox2.TabIndex = 9;
+            this.txtUsuario.Location = new System.Drawing.Point(272, 395);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(278, 26);
+            this.txtUsuario.TabIndex = 9;
             // 
-            // textBox3
+            // txtEmail
             // 
-            this.textBox3.Location = new System.Drawing.Point(272, 436);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(278, 26);
-            this.textBox3.TabIndex = 10;
+            this.txtEmail.Location = new System.Drawing.Point(272, 436);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(278, 26);
+            this.txtEmail.TabIndex = 10;
             // 
-            // textBox4
+            // txtClave
             // 
-            this.textBox4.Location = new System.Drawing.Point(272, 469);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(278, 26);
-            this.textBox4.TabIndex = 11;
+            this.txtClave.Location = new System.Drawing.Point(272, 469);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Size = new System.Drawing.Size(278, 26);
+            this.txtClave.TabIndex = 11;
             // 
             // btnAgregarUser
             // 
@@ -218,17 +220,39 @@
             this.btnAgregarUser.TabIndex = 13;
             this.btnAgregarUser.Text = "Agregar Usuario";
             this.btnAgregarUser.UseVisualStyleBackColor = true;
+            this.btnAgregarUser.Click += new System.EventHandler(this.btnAgregarUser_Click);
+            // 
+            // Activo
+            // 
+            this.Activo.AutoSize = true;
+            this.Activo.Location = new System.Drawing.Point(156, 508);
+            this.Activo.Name = "Activo";
+            this.Activo.Size = new System.Drawing.Size(51, 20);
+            this.Activo.TabIndex = 14;
+            this.Activo.Text = "label7";
+            // 
+            // cbxActivo
+            // 
+            this.cbxActivo.AutoSize = true;
+            this.cbxActivo.Location = new System.Drawing.Point(272, 506);
+            this.cbxActivo.Name = "cbxActivo";
+            this.cbxActivo.Size = new System.Drawing.Size(78, 24);
+            this.cbxActivo.TabIndex = 15;
+            this.cbxActivo.Text = "Activo";
+            this.cbxActivo.UseVisualStyleBackColor = true;
             // 
             // UsuariosVen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 704);
+            this.Controls.Add(this.cbxActivo);
+            this.Controls.Add(this.Activo);
             this.Controls.Add(this.btnAgregarUser);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtClave);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.txtUsuario);
+            this.Controls.Add(this.txtID);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -240,8 +264,8 @@
             this.Text = "UsuariosVen";
             this.Load += new System.EventHandler(this.UsuariosVen_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datosUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.usuarioBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datosUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -264,10 +288,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtUsuario;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtClave;
         private System.Windows.Forms.Button btnAgregarUser;
+        private System.Windows.Forms.Label Activo;
+        private System.Windows.Forms.CheckBox cbxActivo;
     }
 }

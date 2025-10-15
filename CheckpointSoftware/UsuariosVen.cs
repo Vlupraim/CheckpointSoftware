@@ -21,7 +21,27 @@ namespace CheckpointSoftware
         {
             // TODO: esta línea de código carga datos en la tabla 'datosUsuarios.Usuario' Puede moverla o quitarla según sea necesario.
             this.usuarioTableAdapter.Fill(this.datosUsuarios.Usuario);
-
+            dataGridView1.DataSource = datosUsuarios.Usuario;
         }
+    
+        private void btnAgregarUser_Click(object sender, EventArgs e)
+        {
+            using (BDCheckpointEntities bd = new BDCheckpointEntities())
+            {
+                Usuario nuevoUsuario = new Usuario
+                {
+                    Nombre = txtUsuario.Text,
+                    Email = txtEmail.Text,
+                    PasswordHash = txtClave.Text,
+                    Activo = cbxActivo.Checked
+                };
+
+                bd.Usuario.Add(nuevoUsuario);
+                bd.SaveChanges();
+                MessageBox.Show("Usuario agregado correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.usuarioTableAdapter.Fill(this.datosUsuarios.Usuario);
+            }
+        }
+
     }
 }
